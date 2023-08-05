@@ -1,3 +1,4 @@
+using ProjCB;
 namespace ProjCB.Tests;
 
 public class CBTest
@@ -6,10 +7,10 @@ public class CBTest
     public void CheckIfCBRespondsToHiTest()
     {
         //Arrange        
-        string responseMessage = "Hello";
+        string responseMessage = "";
         ChatBot objectCB = new ChatBot();
         //Act
-        responseMessage = ObjectCB.SendMessage("Hi CB.. How are you?");
+        responseMessage = objectCB.SendMessage("Hi CB.. How are you?");
         //Assert
         Assert.Equal("Hello", responseMessage);
     }

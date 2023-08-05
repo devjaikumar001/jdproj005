@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProjCB\ProjCB.csproj" />
+  </ItemGroup>
+
 </Project>
