@@ -4,6 +4,9 @@ public class ChatBot
 {
     public string SendMessage(string userMessage)
     {
+        if((userMessage == null) || (userMessage.Length == 0)) {
+            return "I cannot hear you?";
+        } 
         if (userMessage.Contains("Hi"))
         {
             return "Hello";
