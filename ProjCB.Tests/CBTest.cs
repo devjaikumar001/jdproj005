@@ -14,4 +14,28 @@ public class CBTest
         //Assert
         Assert.Equal("Hello", responseMessage);
     }
+
+     [Fact]
+    public void CheckIfCBRespondsToWhatsYourNameTest()
+    {
+        //Arrange        
+        string responseMessage = "";
+        ChatBot objectCB = new ChatBot();
+        //Act
+        responseMessage = objectCB.SendMessage("Whats your name?");
+        //Assert
+        Assert.Equal("My Name is Siri", responseMessage);
+    }
+
+     [Fact]
+    public void CheckIfCBRespondsToEmptyTextTest()
+    {
+        //Arrange        
+        string responseMessage = "";
+        ChatBot objectCB = new ChatBot();
+        //Act
+        responseMessage = objectCB.SendMessage(null);
+        //Assert
+        Assert.Equal("I cannot hear you?", responseMessage);
+    }
 }
